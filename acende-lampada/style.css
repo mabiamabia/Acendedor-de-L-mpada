@@ -44,3 +44,7 @@ body {
     font-weight: bolder;
     font-family: sans-serif;
 }
+
+button.orange {
+    background-color: orangered;
+}
