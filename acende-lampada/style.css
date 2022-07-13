@@ -1,0 +1,46 @@
+body {
+    background-image: linear-gradient(rgb(39, 72, 105), rgb(191, 213, 235));
+
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.lamp-image {
+    background-image: url(./img/ligada.jpg);
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    border: black;
+    border-style: double;
+}
+
+.action {
+    align-items: center;
+    text-align: center;
+}
+
+.btn-on {
+    background-color: rgb(41, 118, 0);
+    color: #fff;
+    height: 30px;
+    width: 80px;
+    border: none;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+.btn-off {
+    background-color: rgb(255, 30, 30);
+    color: #fff;
+    height: 30px;
+    width: 80px;
+    border: none;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
