@@ -2,8 +2,8 @@ body {
     background-color: #fff;
 }
 
-
-head, main {
+head,
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,13 +16,11 @@ head, main {
     font-family: sans-serif;
 }
 
-.lamp-image {
-    background-image: url(./img/desligada.jpg);
+#lamp-id {
     height: 300px;
     width: 100%;
     background-repeat: no-repeat, no-repeat;
-    background-position: center;
-
+    text-align: center;
 }
 
 .action {
