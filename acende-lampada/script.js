@@ -1,19 +1,21 @@
-const name = document.querySelector(".name")
+const turnOn = document.getElementById('turnOn');
+const turnOff = document.getElementById('turnOff');
+const lamp = document.getElementById('lamp');
 
-function turnOn() {
-    /* se clicar nesse botão, troque de imagem */
-    return
+
+function cliqueAqui() {
+    alert("clicou")
 }
 
-function turnOff()  {
-    /* se clicar nesse botão, troque de imagem */
-    return
+function lampOn() {
+    lamp.src = './img/ligada.jpg'
 }
 
-function smashLamp() {
-    /* Se clicar duas vezes no botão, troca de imagem */
+function lampOff() {
+    lamp.src = './img/desligada.jpg'
 }
 
-function changeColor() {
-    name.style.color = "blue";
-}
+turnOn.addEventListener('click', lampOn);
+turnOff.addEventListener('click', lampOff);
+lamp.addEventListener('mouseover', lampOn)
+lamp.addEventListener('mouseleave', lampOff)
