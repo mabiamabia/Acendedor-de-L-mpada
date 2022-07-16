@@ -1,6 +1,6 @@
-const turnOn = document.getElementById('turnOn');
-const turnOff = document.getElementById('turnOff');
+const turnOnOff = document.getElementById('turnOnOff');
 const lamp = document.getElementById('lamp');
+
 
 function isLampBroken() {
     return lamp.src.indexOf('quebrada') > -1
@@ -22,8 +22,21 @@ function lampBroken() {
     lamp.src = './img/quebrada.jpg'
 }
 
-turnOn.addEventListener('click', lampOn);
-turnOff.addEventListener('click', lampOff);
+function lampOnOff() {
+    if (turnOnOff.textContent == 'Ligar') {
+        lampOn();
+        turnOnOff.textContent = 'Desligar';
+        turnOnOff.style.backgroundColor = "#fa0202";
+    }
+    else {
+        lampOff();
+        turnOnOff.textContent = 'Ligar';
+        turnOnOff.style.backgroundColor = "rgb(41, 118, 0)";
+       
+    }
+}
+
+turnOnOff.addEventListener('click', lampOnOff);
 lamp.addEventListener('mouseover', lampOn)
 lamp.addEventListener('mouseleave', lampOff)
 lamp.addEventListener('dblclick', lampBroken)
