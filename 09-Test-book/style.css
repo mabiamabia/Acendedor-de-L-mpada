@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+}
+
+.main-title {
+    background-color: #fa2;
+}
+
+#myimage {
+    width: 100px;
+    height: 180px;
+    border-color: #fa0202;
+}
