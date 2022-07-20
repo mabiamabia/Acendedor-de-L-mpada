@@ -73,5 +73,4 @@ Carro.adicionarCor = function (novaCor) {
     document.write(" Cor do carro: " + Carro.cores);
 }
 
-
-/* --------------------------- */
+/* -------------FORMULÁRIOS-------------- */
