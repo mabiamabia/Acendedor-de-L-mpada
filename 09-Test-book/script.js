@@ -40,7 +40,7 @@ nomes[1] = "Bugatti ";
 nomes[2] = "Lamborghini ";
 nomes.push("Mercedes ");
 document.write("Nomes: " + nomes)
-document.getElementById("names").innerHTML = "Names: " + (nomes[1]);
+document.getElementById("names").innerHTML = "Names: " + nomes;
 
 /* ---------------------------------------- */
 
@@ -97,7 +97,7 @@ function validarForm() {
     }
 }
 
-/* ------------------------------ */
+/* ----------------Adicionando elementos-------------- */
 function adicionar() {
     var texto = document.getElementById("texto").value;
     var para = document.createElement("p");
@@ -105,4 +105,27 @@ function adicionar() {
 
     var corpo = document.getElementById("corpo");
     corpo.appendChild(para);
+}
+
+/* ------------------removendo elementos ------------------*/
+function remover() {
+    var mae = document.getElementById("corpo2");
+    var filha = document.getElementById("texto2");
+    mae.removeChild(filha);
+}
+
+/* ------------------Analisa Cookies ------------------*/
+
+function checkCookies() {
+    var user = getCookie("user");
+    var msg = document.getElementById("msg");
+    if (user != null && user != "") {
+        msg.innerHTML = "Bem vinda de volta " + user;
+    } else {
+        user = prompt("Digite seu nome:", "");
+        if (user != null && user != "") {
+            setCookie("user", user, 365);
+            msg.innerHTML = "Bem-vindo" + user;
+        }
+    }
 }
