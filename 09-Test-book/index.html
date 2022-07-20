@@ -38,8 +38,23 @@
     <input id="valor" type="text">
     <button type="button" onclick="verificar()">Testar</button>
     <p id="msg"></p>
+    <!-- ------------------------------------------------- -->
     <hr>
     <h2 class="main-title">Formulários</h2>
+    <form name="meuForm" action="recebe.php" onsubmit="return validarForm()" method="post">
+        Nome: <input type="text" name="nome">
+        E-mail: <input type="text" name="email">
+        <input type="submit" value="Enviar">
+    </form>
+    <p id="valido">Preencha o formulário e clique em enviar</p>
+    <!-- ------------------------------------------------- -->
+    <hr>
+    <h2 class="main-title">Adicionando e removendo elementos</h2>
+    <article id="corpo">
+        <h1>Adicionando elementos</h1>
+        <p>Digite o texto: <input type="text" id="texto"></p>
+        <button onclick="adicionar()">Adicionar</button>
+    </article>
 </body>
 
 </html>
