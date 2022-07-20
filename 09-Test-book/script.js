@@ -40,7 +40,7 @@ nomes[1] = "Bugatti ";
 nomes[2] = "Lamborghini ";
 nomes.push("Mercedes ");
 document.write("Nomes: " + nomes)
-document.getElementById("names").innerHTML = "Names: " + (nomes[1]);
+document.getElementById("names").innerHTML = "Names: " + nomes;
 
 /* ---------------------------------------- */
 
@@ -74,3 +74,58 @@ Carro.adicionarCor = function (novaCor) {
 }
 
 /* -------------FORMULÁRIOS-------------- */
+
+function validarForm() {
+    var val = document.getElementById("valido");
+    try {
+        var x = document.forms["meuForm"]["nome"].value;
+        if (x == null || x == "") {
+            throw "O nome deve ser preenchido";
+        }
+        var y = document.forms["meuForm"]["email"].value;
+        var atpos = y.indexOf("@");
+        var dotpos = y.lastIndexOf(".");
+
+        if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= y.length) {
+            throw "Digite um e-mail válido!";
+        }
+        return true;
+    } catch (err) {
+        val.style.color = "#FF0000";
+        val.innerHTML = "Erro: " + err;
+        return false;
+    }
+}
+
+/* ----------------Adicionando elementos-------------- */
+function adicionar() {
+    var texto = document.getElementById("texto").value;
+    var para = document.createElement("p");
+    para.innerHTML = texto;
+
+    var corpo = document.getElementById("corpo");
+    corpo.appendChild(para);
+}
+
+/* ------------------removendo elementos ------------------*/
+function remover() {
+    var mae = document.getElementById("corpo2");
+    var filha = document.getElementById("texto2");
+    mae.removeChild(filha);
+}
+
+/* ------------------Analisa Cookies ------------------*/
+
+function checkCookies() {
+    var user = getCookie("user");
+    var msg = document.getElementById("msg");
+    if (user != null && user != "") {
+        msg.innerHTML = "Bem vinda de volta " + user;
+    } else {
+        user = prompt("Digite seu nome:", "");
+        if (user != null && user != "") {
+            setCookie("user", user, 365);
+            msg.innerHTML = "Bem-vindo" + user;
+        }
+    }
+}

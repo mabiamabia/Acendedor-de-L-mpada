@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img//pic_bulbon.jpeg">
     <script src="script.js"></script>
     <title>Test Book</title>
 </head>
@@ -38,8 +39,43 @@
     <input id="valor" type="text">
     <button type="button" onclick="verificar()">Testar</button>
     <p id="msg"></p>
+    <!-- ------------------------------------------------- -->
     <hr>
     <h2 class="main-title">Formulários</h2>
+    <form name="meuForm" action="recebe.php" onsubmit="return validarForm()" method="post">
+        Nome: <input type="text" name="nome">
+        E-mail: <input type="text" name="email">
+        <input type="submit" value="Enviar">
+    </form>
+    <p id="valido">Preencha o formulário e clique em enviar</p>
+    <!-- ------------------------------------------------- -->
+    <hr>
+    <h2 class="main-title">Adicionando elementos</h2>
+    <article id="corpo">
+        <h1>Adicionando elementos</h1>
+        <p>Digite o texto: <input type="text" id="texto"></p>
+        <button onclick="adicionar()">Adicionar</button>
+    </article>
+    <!-- ------------------------------------------------- -->
+    <hr>
+    <h2 class="main-title">removendo elementos</h2>
+    <article id="corpo2">
+        <h1>Remover elemento</h1>
+        <p><button onclick="remover()">Remover</button></p>
+        <p id="texto2">Texto que será removido...</p>
+    </article>
+    <!-- ------------------------------------------------- -->
+    <hr>
+    <h2 class="main-title2">Cookies 🍪</h2>
+    <article onload="checkCookie()">
+        <header>
+            <title>Teste com cookies</title>
+        </header>
+
+        <h1>Sistema de biscoitos</h1>
+        <p id="msg"></p>
+
+    </article>
 </body>
 
 </html>
